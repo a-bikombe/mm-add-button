@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Measures Form</title>
+    <link rel="icon" type="image/png" href="images/ncc-color-logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:575px)">
+    <link href="css/tablet.css" rel="stylesheet" media="screen and (min-width:576px)">
+    <link href="css/laptop-desktop.css" rel="stylesheet" media="screen and (min-width:1199px)">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+    <script type="module" src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/ncc-full-color-logo.png" alt="" height="30" class="d-inline-block align-text-center" id="page-heading-logo"> Multiple Measures Form
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="student-creds">
+            <!-- Student Name and ID, Intro Links -->
+            <div class="input-block">
+                <div class="student-name">
+                    <label for="input-name" id="input-name-label">Name</label>
+                    <input type="text" class="input-name" name="input-name" id="input-name" placeholder="Optional">
+                </div>
+                <div class="student-id">
+                    <label for="input-id" id="input-id-label">Student ID</label>
+                    <input type="text" class="input-id" name="input-id" id="input-id" placeholder="Optional">
+                </div>
+                <div class="see-advising">
+                    <p>If the student is a transfer student or a non-native English speaker, contact the <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>.</p>
+                    <p>If student is in ESOL, proceed to <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.</p>
+                    <p>If student has HiSET or GED, proceed to <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="page-accordion">
+            <!-- Accordion -->
+            <div class="accordion-item">
+                <!-- Multiple Measures Collapse -->
+                <h2 class="accordion-header" id="multi-measures-heading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#multi-measures" aria-expanded="true" aria-controls="multi-measures">Multiple Measures</button>
+                </h2>
+                <div id="multi-measures" class="accordion-collapse collapse show" aria-labelledby="multi-measures-heading" data-bs-parent="#page-accordion">
+                    <div class="accordion-body">
+                        <div class="input-block ">
+                            <!-- High School Input -->
+                            <label for="input-mm-1">Name of High School</label>
+                            <select class="input-mm-1" name="input-mm-1" id="input-mm-1">
+                                    <option value="[Select a High School]">[Select a High School]</option>
+                                    <option value="Alvirne" id="Alvirne">Alvirne</option>
+                                    <option value="Campbell" id="Campbell">Campbell</option>
+                                    <option value="ConVal" id="ConVal">ConVal</option>
+                                    <option value="Hollis_Brookline" id="Hollis_Brookline">Hollis/Brookline</option>
+                                    <option value="Londonderry" id="Londonderry">Londonderry</option>
+                                    <option value="Manchester_District" id="Manchester_District">Manchester District</option>
+                                    <option value="Mascenic" id="Mascenic">Mascenic</option>
+                                    <option value="Merrimack" id="Merrimack">Merrimack</option>
+                                    <option value="Milford" id="Milford">Milford</option>
+                                    <option value="Nashua_North" id="Nashua_North">Nashua North</option>
+                                    <option value="Nashua_South" id="Nashua_South">Nashua South</option>
+                                    <option value="Pelham" id="Pelham">Pelham</option>
+                                    <option value="Salem" id="Salem">Salem</option>
+                                    <option value="Wilton_Lyndenborough" id="Wilton_Lyndenborough">Wilton/Lyndenborough</option>
+                                    <option value="Other" id="Other">Other</option>
+                                </select>
+                        </div>
+                        <div class="hidden" id="gpa-popup">
+                            <!-- Other (High School Name / GPA) Pop Up Box -->
+                            <div class="input-block">
+                                <label for="hs-name">Please type in your High School Name. </label>
+                                <input name="hs-name" type="text" class="hidden" id="hs-name" placeholder="Name of High School">
+                            </div>
+                            <div class="input-block">
+                                <!-- GPA Numerator -->
+                                <label for="input-mm-1-gpa-num">Please enter your GPA.</label>
+                                <input name="input-mm-1-gpa-num" id="input-mm-1-gpa-num" type="number" value="0.0" step="0.1" min="0.0" max="100.0">
+                                <!-- GPA Denominator -->
+                                <span>out of</span>
+                                <input name="input-mm-1-gpa-num" id="input-mm-1-gpa-den" type="number" value="0.0" step="0.1" min="0.0" max="100.0">
+                            </div>
+                        </div>
+                        <div class="input-block">
+                            <!-- Year Graduated -->
+                            <label for="input-mm-2">Year Graduated</label>
+                            <select class="input-mm-2" name="input-mm-2" id="input-mm-2">
+                                    <option value="[Select a Year]">[Select a Year]</option>
+                                    <option value="Not Yet Graduated">Not Yet Graduated</option>
+                                    <option value="1 Year Ago">1 Year Ago</option>
+                                    <option value="2 Years Ago">2 Years Ago</option>
+                                    <option value="3 Years Ago">3 Years Ago</option>
+                                    <option value="4 Years Ago">4 Years Ago</option>
+                                    <option value="5 Years Ago">5 Years Ago</option>
+                                </select>
+                        </div>
+                        <div class="input-block">
+                            <!-- Cumulative GPA -->
+                            <label for="input-mm-3">Cumulative GPA</label>
+                            <select class="input-mm-3" name="input-mm-3" id="input-mm-3">
+                                    <option value="[Select a GPA]">[Select a GPA]</option>
+                                    <option value="1.0-1.9">1.0-1.9</option>
+                                    <option value="2.0-2.9">2.0-2.9</option>
+                                    <option value="3.0-3.9">3.0-3.9</option>
+                                    <option value="4.0-4.9">4.0-4.9</option>
+                                </select>
+                        </div>
+                        <div class="input-block">
+                            <!-- Last English Course Taken -->
+                            <label for="input-mm-4">Last English Course Taken: Passed</label>
+                            <select class="input-mm-4" name="input-mm-4" id="input-mm-4">
+                                    <option value="[Select a Course]">[Select a Course]</option>
+                                    <option value="English_Foundational">English Foundational</option>
+                                    <option value="Honors_College_Prep">Honors/College Prep</option>
+                                    <option value="English_Foundational">AP</option>
+                                </select>
+                        </div>
+                        <div class="input-block">
+                            <!-- Last Math Course Taken -->
+                            <label for="input-mm-5">Last Math Course Taken: C or Better</label>
+                            <select class="input-mm-5" name="input-mm-5" id="input-mm-5">
+                                    <option value="[Select a Course]">[Select a Course]</option>
+                                    <option value="AlgebraI" id="AlgebraI">Algebra I</option>
+                                    <option value="AlgebraII_Statistics" id="AlgebraII_Statistics">Algebra II/Statistics</option>
+                                    <option value="AlgebraIII" id="AlgebraIII">Algebra III</option>
+                                    <option value="Precalculus_Trigonometry" id="Precalculus_Trigonometry">Precalculus/Trigonometry</option>
+                                    <option value="Calculus" id="Calculus">Calculus</option>
+                                </select>
+                        </div>
+                        <div class="hidden" id="math-popup">
+                            <!-- Other (High School Name / GPA) Pop Up Box -->
+                            <span>Please select a previous math course.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <!-- SAT Collapse -->
+                <h2 class="accordion-header" id="sat-heading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sat" aria-expanded="false" aria-controls="sat">SAT</button>
+                </h2>
+                <div id="sat" class="accordion-collapse collapse" aria-labelledby="sat-heading" data-bs-parent="#page-accordion">
+                    <div class="accordion-body">
+                        <div class="help">
+                            <p id="score-input-help">*For each score input, please input your best score.</p>
+                        </div>
+                        <div class="input-block">
+                            <!-- Date -->
+                            <label for="input-sat-1">Date</label>
+                            <input type="text" class="input-sat-1" name="input-sat-1" id="input-sat-1" placeholder="MM/DD/YYYY">
+                        </div>
+                        <div class="score-input-div sat">
+                            <div class="input-block score-input">
+                                <!-- SAT Math Score -->
+                                <label for="input-sat-2">SAT Math Score</label>
+                                <select class="input-sat-2" name="input-sat-2" id="input-sat-2">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                            </div>
+                            <button type="button" id="add-another-1">Add Another Score: _ Remaining</button>
+                            <!-- "Add Another" Button -->
+                        </div>
+                        <div class="score-input-div sat">
+                            <div class="input-block score-input">
+                                <!-- SAT Critical Reading and Writing Score -->
+                                <label for="input-sat-3">SAT Critical Reading and Writing Score</label>
+                                <select class="input-sat-3" name="input-sat-3" id="input-sat-3">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                            </div>
+                            <button type="button" id="add-another-2">Add Another Score: _ Remaining</button>
+                            <!-- "Add Another" Button -->
+                        </div>
+                        <div class="score-input-div sat">
+                            <div class="input-block score-input">
+                                <!-- SAT Composite Score -->
+                                <label for="input-sat-4">SAT Composite Score</label>
+                                <select class="input-sat-4" name="input-sat-4" id="input-sat-4">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                            </div>
+                            <button type="button" id="add-another-3">Add Another Score: _ Remaining</button>
+                            <!-- "Add Another" Button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <!-- Accuplacer Collapse -->
+                <h2 class="accordion-header" id="accuplacer-heading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accuplacer" aria-expanded="false" aria-controls="accuplacer">Accuplacer</button>
+                </h2>
+                <div id="accuplacer" class="accordion-collapse collapse" aria-labelledby="accuplacer-heading" data-bs-parent="#page-accordion">
+                    <div class="accordion-body">
+                        <div class="help">
+                            <p id="score-input-help">*For each score input, please input your best score.</p>
+                        </div>
+                        <div class="input-block">
+                            <!-- Taken -->
+                            <label>Taken?</label>
+                            <label><input name="input-acc-1" type="radio" class="input-acc-1" id="input-acc-1-yes" value="Yes">Yes</label>
+                            <label><input name="input-acc-1" type="radio" class="input-acc-1" id="input-acc-1-no" value="No">No</label>
+                        </div>
+                        <div class="score-input-div acc">
+                            <div class="input-block score-input">
+                                <!-- English Score: WRTG -->
+                                <label for="input-acc-2">English Score: WRTG</label>
+                                <select class="input-acc-2" name="input-acc-2" id="input-acc-2">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                            </div>
+                            <button type="button" id="add-another-4">Add Another Score: _ Remaining</button>
+                            <!-- "Add Another" Button -->
+                        </div>
+                        <div class="score-input-div acc">
+                            <div class="input-block score-input">
+                                <!-- English Score: ESSY -->
+                                <label for="input-acc-3">English Score: ESSY</label>
+                                <select class="input-acc-3" name="input-acc-3" id="input-acc-3">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                            </div>
+                            <button type="button" id="add-another-5">Add Another Score: _ Remaining</button>
+                            <!-- "Add Another" Button -->
+                        </div>
+                        <div class="score-input-div acc">
+                            <div class="input-block score-input">
+                                <!-- Math Score: ARNG -->
+                                <label for="input-acc-4">Math Score: ARNG</label>
+                                <select class="input-acc-4" name="input-acc-4" id="input-acc-4">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                            </div>
+                            <button type="button" id="add-another-6">Add Another Score: _ Remaining</button>
+                            <!-- "Add Another" Button -->
+                        </div>
+                        <div class="score-input-div acc">
+                            <div class="input-block score-input">
+                                <!-- Math Score: QAS -->
+                                <label for="input-acc-5">Math Score: QAS</label>
+                                <select class="input-acc-5" name="input-acc-5" id="input-acc-5">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                            </div>
+                            <button type="button" id="add-another-7">Add Another Score: _ Remaining</button>
+                            <!-- "Add Another" Button -->
+                        </div>
+                        <div class="score-input-div acc">
+                            <div class="input-block score-input">
+                                <!-- Math Score: AAF -->
+                                <label for="input-acc-6">Math Score: AAF</label>
+                                <select class="input-acc-6" name="input-acc-6" id="input-acc-6">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                            </div>
+                            <button type="button" id="add-another-8">Add Another Score: _ Remaining</button>
+                            <!-- "Add Another" Button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="eval-button-box" id="eval-button-box">
+            <!-- Evaluate Button and Evaluation Box -->
+            <div class="eval-button">
+                <!-- Evaluate Button -->
+                <button class="button btn btn-light" id="eval-btn">Evaluate</button>
+            </div>
+
+            <div class="eval-box hidden" id="eval-box">
+                <!-- Evaluation Box -->
+                <div class="based-on">
+                    <h5>Based on</h5>
+                    <!-- max of 24 scores -->
+                    <div id="scores">
+                        <output id="score"></output>
+                        <!-- Score Name 1: Score Range -->
+                    </div>
+                </div>
+                <div class="qualifying-courses">
+                    <h5>Student may qualify for:</h5>
+                    <div id="courses">
+                        <output id="-evaluated-eng-course"></output>
+                        <!-- Qualifying English Course -->
+                        <output id="-evaluated-math-course"></output>
+                        <!-- Qualifying Math Course -->
+                    </div>
+                </div>
+                <div class="print-button">
+                    <!-- Print Button -->
+                    <button type="button" class="button btn btn-light" id="print-btn">Print</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- CONNECT SCORE ID TO MATHPLACEMENT.JS
+        <div class="input block">
+            <label for="score">Score</label>
+            <input type="number" id="score" min="0" max="1000">
+        </div>
+        <div class="output block">
+            <output id="placement"></output>
+        </div>
+        -->
+
+    <!-- <a href="demo/demo.html">Go to demo</a> -->
+</body>
+
+</html>
